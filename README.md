@@ -21,7 +21,7 @@ A temperatura do ambiente influenciava também na temperatura do aparelho. Porem
 
 Por meio deste desafio estamos procurando resolver um problema de classificação. Como não possuímos os `rótulos` de cada uma das medições, podemos perceber que precisariamos procurar agrupar os dados para então podermos classificá-lo posteriormente.
 
-Desta forma, após a realização dos tratamentos dos dados, realizei o agrupamento por meio do algoritmo `KMeans` (clusterização) para podermos colocar em dois grupos (0 e 1), que foram utilizados como variável `target`. Observamos que os dados criados ficam desbalanceados.
+Desta forma, após a realização dos tratamentos dos dados, realizei o agrupamento por meio do algoritmo `KMeans` (clusterização) para podermos colocar em dois grupos (0 e 1), que foram utilizados como variável `target`. Observamos que os dados criados ficam desbalanceados. Dessa forma apliquei a técnica SMOTE para criar dados sintéticos para manter os dados balanceados e não haver nenhum tipo de viés dentro dos modelos utilizados.
 
 `np.unique(dataset['Groups'], return_counts=True)` <br />
 `(array([0, 1], dtype=int32), array([790, 921]))`
